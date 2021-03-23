@@ -6,6 +6,8 @@ RUN cd /opt/ && \
     rm joget-enterprise-linux-7.0.15.tar.gz && \
     mv joget-enterprise-linux-7.0.15 joget
 
+RUN mkdir /opt/joget/wflowbak && mv /opt/joget/wflow/* /opt/joget/wflowbak
+
 COPY ./run.sh /opt/joget
 
 VOLUME /opt/joget/wflow
